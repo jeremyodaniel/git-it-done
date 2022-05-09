@@ -43,7 +43,7 @@ fetch(apiUrl)
 var displayRepos = function(repos,searchTerm) {
   console.log(repos);
   console.log(searchTerm);
-// Check if apai returned any repos
+// Check if api returned any repos
 if (repos.length === 0) {
   repoContainerEl.textContent = "No repositories found.";
   return;
