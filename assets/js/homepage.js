@@ -56,9 +56,10 @@ for (var i = 0; i < repos.length; i++) {
   // Format repo name
   var repoName = repos[i].owner.login + "/" + repos[i].name;
 
-  // Create a container for each repo
-  var repoEl = document.createElement("div");
+  // create a container for each repo
+  var repoEl = document.createElement("a");
   repoEl.classList = "list-item flex-row justify-space-between align-center";
+  repoEl.setAttribute("href", "./single-repo.html?repo=" + repoName);
 
   // Create a span element to hold repository name
   var titleEl = document.createElement("span");
@@ -88,4 +89,3 @@ for (var i = 0; i < repos.length; i++) {
 };
 
 userFormEl.addEventListener("submit", formSubmitHandler);
-
